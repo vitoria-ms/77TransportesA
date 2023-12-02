@@ -1,0 +1,17 @@
+{
+    "name": "site/77transportes",
+    "description": "Aluguel de transportes",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "77transportes\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maria Eduarda",
+            "email": "mariaeduardalimatias@gmail.com"
+        }
+    ],
+    "require": {}
+}
