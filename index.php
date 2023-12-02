@@ -2,20 +2,28 @@
 
 declare(strict_types=1);
 
+use Transportes\Controllers\ErroController;
+use Transportes\Controllers\HomeController;
+use Transportes\Controllers\LoginController;
+
 require __DIR__ . "/vendor/autoload.php";
 
 $url = $_GET['url'] ?? "/";
 switch ($url) {
     case "/":
-        echo "Página Inicial";
+        $controller = new HomeController();
+        $controller->index();
         break;
         case "login":
-            echo "Página de Login";
+            $controller = new LoginController();
+            $controller->login();
             break;
             case "cadastro":
-                echo "Página de Cadastro";
+                $controller = new LoginController();
+                $controller->criarConta();
                 break;
     default:
-    echo "404 - Página não Encontrada";
+    $controller = new ErroController();
+    $controller->erro404();
         break;
 }
