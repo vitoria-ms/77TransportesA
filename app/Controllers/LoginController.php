@@ -2,14 +2,13 @@
 
 namespace Transportes\Controllers;
 
-class LoginController{
+class LoginController extends Controller{
  
     public function login(){
-        
-        echo "Página de Login";
+        $this->view('login',['pagina' => 'Página de Login']);
     }
     public function criarConta(){
-        echo "Página de Cadastro de Conta";
+        $this->view('conta');
               
     }
 }

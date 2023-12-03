@@ -2,10 +2,10 @@
 
 namespace Transportes\Controllers;
 
-class HomeController{
+class HomeController extends Controller{
  
     public function index(){
-        
-        echo "Página Inicial";
+        $dados = ['titulo' => '77 Transportes'];
+        $this->view('inicial', $dados);
     }
 }
