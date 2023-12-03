@@ -2,7 +2,9 @@
 
 namespace Transportes\Controllers;
 
-class ErroController{
+use Transportes\Core\Controller;
+
+class ErroController extends Controller{
  
     public function erro($tipo){
         
@@ -14,7 +16,8 @@ class ErroController{
             $this->view('erro', ['msg' => 'Controller não existe']);
             break;
         case "metodo":
-            $this->view('erro' ['msg' => 'O método não existe no controlador.']);
+            $this->view('erro', ['msg' => 'O método não existe no controlador.']);
+        break;
     
     }
     }

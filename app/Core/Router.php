@@ -24,7 +24,7 @@ if( array_key_exists($url, $rotas) ){
     }
 
     
-prtotected static function carregaController($controller, $metodo){
+protected static function carregaController($controller, $metodo){
     $controller = NS_CONTROLLERS . $controller;
     if(class_exists ($controller)){
       $ctr = new $controller();
@@ -42,7 +42,7 @@ prtotected static function carregaController($controller, $metodo){
 
     protected static function erro(string $tipo, int $codigo = 400){
         http_response_code($codigo);
-        $controlador = NS_CONTROLLERS. 'ErroController';
+        $controller = NS_CONTROLLERS. 'ErroController';
         $ctr = new $controller();
         $ctr->erro($tipo);
     }

@@ -2,6 +2,8 @@
 
 namespace Transportes\Controllers;
 
+use Transportes\Core\Controller;
+
 class LoginController extends Controller{
  
     public function login(){

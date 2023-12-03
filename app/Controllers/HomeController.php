@@ -2,6 +2,8 @@
 
 namespace Transportes\Controllers;
 
+use Transportes\Core\Controller;
+
 class HomeController extends Controller{
  
     public function index(){
